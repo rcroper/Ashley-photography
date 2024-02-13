@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Photography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="./Logo/Logo1.png" alt="Ashley Photgraphy Logo" class="logo">
+            <nav>
+                <ul class="navlist">
+                    <li class="navitem"><a role="button" aria-label="click here for more about Ashley Photography" href="#" class="navlink">About me</a></li>
+                    <li class="navitem"><a role="button" aria-label="Click here to view work done by Ashley Photography" href="#" class="navlink">Gallery</a></li>
+                    <li class="navitem"><a role="button" aria-label="Click here for Contact information" href="#" class="navlink">Contact</a></li>
+                </ul>
+                
+              <button aria-label="navtoggle" class="navtoggle"><span class="visually-hidden">Menu</span><img class="openicon" src="/menu-3-line.svg" alt=""></button>
+            
+                
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Ashley Photgraphy</h1>
+                <h2>We make dreams reality</h2>
+                <a role="button" aria-label="click here to request a quote from Ashley Photography" href="#" class="hero-cta">Make it happen</a>
+            </div>
+            
+        </section>
+        <footer>
+            <h3>&copy 2024 Ashley Photography</h3>
+        </footer>
+    </main>
+    <script>
+        const navtoggle = document.querySelector('.navtoggle');
+        const menu = document.querySelector('.navlist');
+        const openicon = document.querySelector('.openicon');
+        const closeicon = document.querySelector('.closeicon');
+
+        navtoggle.addEventListener('click', () =>{
+            menu.classList.toggle ("openmenu");
+            if(menu.classList.contains("openmenu")) {
+                openicon.src = ("/close-line.svg");
+            }else{
+                openicon.src = ("/menu-3-line.svg");
+            }
+            
+                
+           
+            
+
+            
+
+            
+            
+        })
+    </script>
+</body>
+</html>

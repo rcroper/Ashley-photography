@@ -1,0 +1,224 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --color-white: white;
+    --clr-black: #090909;
+    --clr-btn:#41203D;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Judson", serif;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 45px;
+
+    z-index: 1000;
+}
+
+.navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlink{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    transition: .5s ease;
+}
+
+.navlink:hover,
+.navlink:focus{
+    opacity: .5;
+}
+
+.navtoggle{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    display: none;
+    
+}
+
+
+.navtoggle:hover,
+.navtoggle:focus{
+    border: 2px solid white;
+}
+.openicon{
+    width: 40px;
+    fill: white !important;
+    display: none;
+    
+    
+    
+}
+
+
+
+.closeicon{
+    width: 40px;
+    fill: white !important;
+    display: none;
+    
+
+    
+    
+}
+.hero{
+    height: 100dvh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.802), black),url(/montage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.hero-content h1{
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+}
+
+.hero-content h2{
+    font-size: 2.3rem;
+    color: white;
+    font-weight: 400;
+}
+
+.hero-cta{
+    background-color: var(--clr-btn);
+    color: white;
+    padding:1rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    transition: .5s ease-in-out;
+}
+
+.hero-cta:hover,
+.hero-cta:focus{
+    background-color: #924f8a;
+    box-shadow: 2px 2px 25px rgba(255, 255, 255, 0.575);
+}
+
+
+.logo{
+    width: 100px;
+
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3{
+    font-size: 1.2;
+    color: white;
+    
+}
+
+
+
+@media (max-width: 780px) {
+    .navlist{
+        position: fixed;
+        top: 100px;
+        background-color: black;
+        width: 100%;
+        left: 50%;
+        padding: 200px 40px;
+        transform: translateX(-50%);
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .5s ease;
+    }
+
+    .openmenu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .navtoggle{
+        display: block;
+        
+    }
+
+    .openicon{
+        display: block;
+    }
+
+    .navlink{
+        font-size: 1.4rem;
+    }
+
+    
+}
+
+@media (max-width: 633px){
+    .hero-content h1{
+        font-size: 9vw;
+    }
+
+    .hero-content h2{
+        font-size: 6vw;
+    }
+}
